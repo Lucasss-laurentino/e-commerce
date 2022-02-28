@@ -1,0 +1,25 @@
+#navbar {
+    background-color: #F64B6A;
+}
+.carousel-item {
+    background-color: #F64B6A;
+}
+#search {
+    border: 1px solid #F64B6A;
+    color: #F64B6A;
+}
+#search::placeholder {
+    color: #F64B6A;
+}
+#button_search {
+    background-color: #F64B6A;
+    color: white;
+}
+.paginacao {
+    background-color: #F64B6A;
+    color: white;
+}
+.adc_carrinho {
+    background-color: #F64B6A;
+    color: white;
+}
