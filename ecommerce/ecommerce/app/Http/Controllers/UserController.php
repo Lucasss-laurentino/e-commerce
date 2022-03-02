@@ -13,4 +13,12 @@ class USerController extends Controller
     
     }
 
+    /* Cadastrar usuário */
+    public function store(Request $request) {
+
+        echo $request->email;
+        echo $request->password;
+
+    }
+
 }

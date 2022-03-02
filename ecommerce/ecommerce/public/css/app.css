@@ -4,11 +4,11 @@
 .carousel-item {
     background-color: #F64B6A;
 }
-#search {
+.search {
     border: 1px solid #F64B6A;
     color: #F64B6A;
 }
-#search::placeholder {
+.search::placeholder {
     color: #F64B6A;
 }
 #button_search {
@@ -22,4 +22,20 @@
 .adc_carrinho {
     background-color: #F64B6A;
     color: white;
+}
+.card-footer {
+    background-color: white;
+}
+.btn {
+    background-color: #F64B6A;
+    color: white;
+    font-weight: bold;
+}
+h5.modal-title {
+    color: #F64B6A;
+    font-weight: bolder;
+}
+label {
+    color: #F64B6A;
+    font-weight: bold;
 }
