@@ -19,3 +19,7 @@ use App\Http\Controllers\UserController;
 Route::get('/', [UserController::class, 'index']);
 
 Route::post('/store', [UserController::class, 'store']);
+
+Route::post('/auth', [UserController::class, 'auth']);
+
+Route::get('/logout', [UserController::class, 'logout']);

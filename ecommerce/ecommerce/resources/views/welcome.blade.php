@@ -50,6 +50,11 @@
                             <li class="nav-item">
                                 <a href="#" class="nav-link text-white" id="btn_login" data-toggle="modal" data-target="#exampleModalCenter2">Entrar</a>
                             </li>
+                            @if (session()->get('usuario') != null)
+                            <li class="nav-item">
+                                <a href="/logout" class="nav-link text-white" id="btn_sair">Sair</a>
+                            </li>
+                            @endif
                             <li class="nav-item">
                                 <a href="#" class="nav-link text-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
@@ -404,21 +409,20 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                        <form id="formulario_de_login">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email</label>
-                                <input type="email" name="email" class="search input_email form-control" id="exampleInputEmail12" aria-describedby="emailHelp">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Senha</label>
-                                <input type="password" name="password" class="search input_senha form-control" id="exampleInputPassword12">
-                            </div>
-                            <p class="mt-4 text-danger" id="erros_login"></p>
-                        </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn" onclick="location.href = '/'" data-dismiss="modal">Fechar</button>
-                            <button type="button" id="confirmar_login" class="btn">Entrar</button>
+                            <form id="formulario_de_login">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email</label>
+                                    <input type="email" name="email_login" class="search input_email_login form-control" id="exampleInputEmail12" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Senha</label>
+                                    <input type="password" name="password_login" class="search input_senha_login form-control" id="exampleInputPassword12">
+                                </div>
+                                <p class="mt-4 text-danger" id="erros_login"></p>
+                                <button type="button" class="btn" onclick="location.href = '/'" data-dismiss="modal">Fechar</button>
+                                <button type="button" id="confirmar_login" class="btn">Entrar</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -449,4 +453,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="{{ asset('/js/modal_cadastrar.js') }}"></script>
     <script src="{{ asset('/js/validar_inputs_cadastrar.js') }}"></script>
+    <script src="{{ asset('/js/validar_inputs_login.js') }}"></script>
 </html>

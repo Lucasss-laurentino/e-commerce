@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 
 use Illuminate\Support\Facades\Hash;
 
+use Illuminate\Support\Facades\Auth;
+
 use App\Models\Usuario;
 
 class USerController extends Controller
@@ -34,7 +36,7 @@ class USerController extends Controller
             $cadastrar->email = $request->email;
             $cadastrar->password = Hash::make($request->password);
             $cadastrar->cep = $request->cep;
-            $cadastrar->rua = $request->cep;
+            $cadastrar->rua = $request->rua;
             $cadastrar->bairro = $request->bairro;
             $cadastrar->complemento = $request->complemento;
             $cadastrar->numero = $request->numero;
@@ -49,6 +51,30 @@ class USerController extends Controller
 
         }
 
+    }
+
+    /* Autenticar usuário */
+    public function auth(Request $request) {
+
+        if(Auth::attempt(['email' => $request->email_login, 'password' => $request->password_login])) {
+        
+            $usuario = Usuario::where('email', $request->email_login)->first()->toArray();
+            $request->session()->put('usuario', $usuario);
+
+            echo 'true';
+        
+        } else {
+        
+            echo 'false';
+        
+        }
+
+    }
+
+    /* Sair e destruir sessão */
+    public function logout() {
+        session()->flush('usuario');
+        return redirect('/');
     }
 
 }
