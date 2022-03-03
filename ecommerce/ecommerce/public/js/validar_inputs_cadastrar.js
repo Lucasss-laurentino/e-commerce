@@ -21,16 +21,16 @@ $(document).ready(function() {
             success: function(dados) {
                 
                 $('#inputRua').val(dados.logradouro);
-                $('#inputRua').attr('disabled', 'disabled');
+                $('#inputRua').attr('readonly', 'readonly');
 
                 $('#inputBairro').val(dados.bairro);
-                $('#inputBairro').attr('disabled', 'disabled');
+                $('#inputBairro').attr('readonly', 'readonly');
 
                 $('#inputCidade').val(dados.localidade);
-                $('#inputCidade').attr('disabled', 'disabled');
+                $('#inputCidade').attr('readonly', 'readonly');
 
                 $('#inputEstado').val(dados.uf);
-                $('#inputEstado').attr('disabled', 'disabled');
+                $('#inputEstado').attr('readonly', 'readonly');
 
                 $('#inputComplemento').val(dados.complemento);
 
