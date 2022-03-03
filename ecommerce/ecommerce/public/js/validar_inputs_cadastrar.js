@@ -62,7 +62,12 @@ $(document).on('click', '#confirmar_cadastro', function(e) {
                 data: $('#formulario_de_cadastro').serialize(),
                 dataType: 'text',
                 success: function(resposta) {
-                    console.log(resposta);
+                    if(resposta == 'true') {
+                        $('#exampleModalCenter').addClass('d-none');
+                        $('#btn_login').trigger('click');
+                    } else {
+                        $('#erros').html('Email já cadastrado');
+                    }
                 }
             });
         }

@@ -311,7 +311,7 @@
                             @csrf
                             <div class="form-group">
                                 <label for="inpuNome">Nome</label>
-                                <input type="text" class="search form-control" id="inputNome" placeholder="Seu nome">
+                                <input type="text" name="name" class="search form-control" id="inputNome" placeholder="Seu nome">
                             </div>   
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email</label>
@@ -323,31 +323,31 @@
                             </div>
                             <div class="form-group">
                                 <label for="inpuCep">Cep</label>
-                                <input type="text" class="search form-control" id="inputCep" placeholder="Seu cep">
+                                <input type="text" name="cep" class="search form-control" id="inputCep" placeholder="Seu cep">
                             </div>                            
                             <div class="form-group">
                                 <label for="inputRua">Rua</label>
-                                <input type="text" class="search form-control" id="inputRua" placeholder="Nome da rua">
+                                <input type="text" name="rua" class="search form-control" id="inputRua" placeholder="Nome da rua">
                             </div>
                             <div class="form-group">
                                 <label for="inputBairro">Bairro</label>
-                                <input type="text" class="search form-control" id="inputBairro" placeholder="Nome do Bairro">
+                                <input type="text" name="bairro" class="search form-control" id="inputBairro" placeholder="Nome do Bairro">
                             </div>
                             <div class="form-group">
                                 <label for="inputNumero">Número</label>
-                                <input type="Number" class="search form-control" id="inputNumero" placeholder="Número">
+                                <input type="Number" name="numero" class="search form-control" id="inputNumero" placeholder="Número">
                             </div>
                             <div class="form-group">
                                 <label for="inputComplemento">Complemento</label>
-                                <input type="text" class="search form-control" id="inputComplemento" placeholder="Complemento">
+                                <input type="text" name="complemento" class="search form-control" id="inputComplemento" placeholder="Complemento">
                             </div>
                             <div class="form-group">
                                 <label for="inputCidade">Cidade</label>
-                                <input type="text" class="search form-control" id="inputCidade" placeholder="Nome da Cidade">
+                                <input type="text" name="cidade" class="search form-control" id="inputCidade" placeholder="Nome da Cidade">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="inputState">Estado</label>
-                                <input type="text" class="search form-control" id="inputEstado" placeholder="Nome do Estado">
+                                <input type="text" name="estado" class="search form-control" id="inputEstado" placeholder="Nome do Estado">
                                 <!---
                                 <select id="inputState" class="search form-control">
                                     <option selected>Escolha</option>
