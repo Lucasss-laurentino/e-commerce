@@ -144,6 +144,9 @@
                             </div>
                             <div class="card-footer">
                                 <a href="#" class="btn adc_carrinho">Adicionar ao carrinho</a>
+                                @if(session()->get('usuario') && session()->get('usuario')['adm'] == 1)
+                                <a href="#" class="btn adc_carrinho mt-1 w-100">Editar</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -156,6 +159,9 @@
                             </div>
                             <div class="card-footer">
                                 <a href="#" class="btn adc_carrinho">Adicionar ao carrinho</a>
+                                @if(session()->get('usuario') && session()->get('usuario')['adm'] == 1)
+                                <a href="#" class="btn adc_carrinho mt-1 w-100">Editar</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -168,6 +174,9 @@
                             </div>
                             <div class="card-footer">
                                 <a href="#" class="btn adc_carrinho">Adicionar ao carrinho</a>
+                                @if(session()->get('usuario') && session()->get('usuario')['adm'] == 1)
+                                <a href="#" class="btn adc_carrinho mt-1 w-100">Editar</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -180,6 +189,9 @@
                             </div>
                             <div class="card-footer">
                                 <a href="#" class="btn adc_carrinho">Adicionar ao carrinho</a>
+                                @if(session()->get('usuario') && session()->get('usuario')['adm'] == 1)
+                                <a href="#" class="btn adc_carrinho mt-1 w-100">Editar</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -192,6 +204,9 @@
                             </div>
                             <div class="card-footer">
                                 <a href="#" class="btn adc_carrinho">Adicionar ao carrinho</a>
+                                @if(session()->get('usuario') && session()->get('usuario')['adm'] == 1)
+                                <a href="#" class="btn adc_carrinho mt-1 w-100">Editar</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -204,6 +219,9 @@
                             </div>
                             <div class="card-footer">
                                 <a href="#" class="btn adc_carrinho">Adicionar ao carrinho</a>
+                                @if(session()->get('usuario') && session()->get('usuario')['adm'] == 1)
+                                <a href="#" class="btn adc_carrinho mt-1 w-100">Editar</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -216,6 +234,9 @@
                             </div>
                             <div class="card-footer">
                                 <a href="#" class="btn adc_carrinho">Adicionar ao carrinho</a>
+                                @if(session()->get('usuario') && session()->get('usuario')['adm'] == 1)
+                                <a href="#" class="btn adc_carrinho mt-1 w-100">Editar</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -228,6 +249,9 @@
                             </div>
                             <div class="card-footer">
                                 <a href="#" class="btn adc_carrinho">Adicionar ao carrinho</a>
+                                @if(session()->get('usuario') && session()->get('usuario')['adm'] == 1)
+                                <a href="#" class="btn adc_carrinho mt-1 w-100">Editar</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -240,6 +264,9 @@
                             </div>
                             <div class="card-footer">
                                 <a href="#" class="btn adc_carrinho">Adicionar ao carrinho</a>
+                                @if(session()->get('usuario') && session()->get('usuario')['adm'] == 1)
+                                <a href="#" class="btn adc_carrinho mt-1 w-100">Editar</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -252,6 +279,9 @@
                             </div>
                             <div class="card-footer">
                                 <a href="#" class="btn adc_carrinho">Adicionar ao carrinho</a>
+                                @if(session()->get('usuario') && session()->get('usuario')['adm'] == 1)
+                                <a href="#" class="btn adc_carrinho mt-1 w-100">Editar</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -264,6 +294,9 @@
                             </div>
                             <div class="card-footer">
                                 <a href="#" class="btn adc_carrinho">Adicionar ao carrinho</a>
+                                @if(session()->get('usuario') && session()->get('usuario')['adm'] == 1)
+                                <a href="#" class="btn adc_carrinho mt-1 w-100">Editar</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -276,6 +309,9 @@
                             </div>
                             <div class="card-footer">
                                 <a href="#" class="btn adc_carrinho">Adicionar ao carrinho</a>
+                                @if(session()->get('usuario') && session()->get('usuario')['adm'] == 1)
+                                <a href="#" class="btn adc_carrinho mt-1 w-100">Editar</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -440,7 +476,7 @@
                         <a href="#" class="text-decoration-none ">Politica de Privacidade</a>
                     </div>
                     <div class="col-12 col-md-4 text-center text-dark text-md-rigth">
-                        <a href="#" class="text-decoration-none">Administração</a>
+                        <a href="#" id="login_adm" class="text-decoration-none">Administração</a>
                     </div>
                 </div>
             </div>

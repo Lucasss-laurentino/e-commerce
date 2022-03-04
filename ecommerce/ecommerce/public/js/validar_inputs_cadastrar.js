@@ -47,15 +47,44 @@ $(document).on('click', '#confirmar_cadastro', function(e) {
     let senha = $('.input_senha').val();
     
     /* Validando email e senha */
-        if ($('.input_email').val().indexOf("@") == -1 || $('.input_email').val().indexOf(".") == -1 || $('.input_email').val().indexOf(".") - $('.input_email').val().indexOf("@") == 1) { 
+        if ($('#inputNome').val().length < 3) {
+
+            $('#erros').html('Nome curto');    
+
+        }    else if ($('.input_email').val().indexOf("@") == -1 || $('.input_email').val().indexOf(".") == -1 || $('.input_email').val().indexOf(".") - $('.input_email').val().indexOf("@") == 1) { 
+
             $('#erros').html('Email inválido');
-        } else if ($('#inputNome').val().length < 3) {
-            $('#erros').html('Nome curto');
+
+        } else if($('#inputCep').val().length < 10) {
+
+            $('#erros').html('Preencha o cep corretamente');
+
+        } else if ($('#inputRua').val().length == 0) {
+
+            $('#erros').html('Preencha um cep válido');
+
+        } else if ($('#inputBairro').val().length == 0) {
+
+            $('#erros').html('Preencha um cep válido');
+
+        } else if ($('#inputCidade').val().length == 0) {
+
+            $('#erros').html('Preencha um cep válido');
+
+        } else if ($('#inputEstado').val().length == 0) {
+
+            $('#erros').html('Preencha um cep válido');
+
         } else if (senha.length < 8) {
+        
             $('#erros').html('Senha curta');
+        
         } else if ($('#inputNumero').val().length > 4 || $('#inputNumero').val().length == 0) {
+        
             $('#erros').html('Preencha o número da sua residência');
+        
         } else {
+        
             $.ajax({
                 url: '/store',
                 method: 'POST',

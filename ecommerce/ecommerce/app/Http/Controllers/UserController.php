@@ -14,7 +14,7 @@ use App\Models\Usuario;
 
 class USerController extends Controller
 {
-    
+    /* Retornar view index com informações dos produtos */
     public function index() {
 
         return view('welcome');
@@ -71,7 +71,7 @@ class USerController extends Controller
 
     }
 
-    /* Sair e destruir sessão */
+    /* Sair e destruir sessão  de usuario autenticado*/
     public function logout() {
         session()->flush('usuario');
         return redirect('/');
