@@ -470,7 +470,7 @@
             <div class="container">
                 <div class="row py-3">
                     <div class="col-12 col-md-4 text-center text-md-left">
-                        &copy; 2021 - Moda Feminina
+                        &copy; 2022 - Moda Feminina
                     </div>
                     <div class="col-12 col-md-4 text-center text-md-left">
                         <a href="#" class="text-decoration-none ">Politica de Privacidade</a>
